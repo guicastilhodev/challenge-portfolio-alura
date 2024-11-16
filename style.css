@@ -1,26 +1,38 @@
-/* Este repositório base foi criado para te ajudar caso você não saiba como começar. Lembre-se de que o portfólio é a sua carta de apresentação e você deve dar a sua cara. Por isso, convidamos você a personalizá-lo de acordo com o seu estilo e preferências; não se limite apenas ao layout proposto no Figma. */
 :root {
-    --cor-de-fundo: #F5F5F5;
+    --cor-de-fundo: #f8f9fa;
     --cor-de-fundo-menu: #ffffff;
-    --cor-do-link: #000000;
+    --cor-do-link: #007bff;
+    --cor-titulo: #343a40;
+    --cor-texto: #6c757d;
+    --cor-botao: #007bff;
+    --cor-botao-hover: #0056b3;
+    --cor-borda: #dee2e6;
 }
 
 body {
     background-color: var(--cor-de-fundo);
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
+    color: var(--cor-texto);
     line-height: 1.6;
 }
 
 ol, ul, li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: var(--cor-do-link);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-botao-hover);
 }
 
 /* ------------------------------ Seção Menu -------------------------------*/
@@ -30,80 +42,245 @@ a {
     align-items: center;
     padding: 1rem;
     background-color: var(--cor-de-fundo-menu);
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .cabecalho__logo {
-    max-width: 80px; /* Ajuste para telas pequenas */
+    max-width: 80px;
+    margin-bottom: 0.5rem;
 }
 
 .cabecalho__titulo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-titulo);
     text-align: center;
 }
 
 .navegacao__lista {
-    display: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .navegacao__elemento a {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
-/* ------------------------------ Seção Apresentação ------------------------------*/
 
+/* ------------------------------ Seção Apresentação ------------------------------*/
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.apresentacao__foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--cor-borda);
+}
+
+.apresentacao__titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-titulo);
+    margin-bottom: 0.5rem;
+}
+
+.apresentacao__subtitulo {
+    font-size: 1rem;
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+}
+
+.redes {
+    display: flex;
+    gap: 1rem;
+}
+
+.redes__elemento a {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
+.sobre-mim {
+    padding: 2rem 1rem;
+    background-color: var(--cor-de-fundo);
+}
 
+.sobre-mim__titulo {
+    font-size: 1.8rem;
+    color: var(--cor-titulo);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sobre-mim__texto {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    line-height: 1.8;
+}
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
+.habilidades {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.habilidades__titulo {
+    font-size: 1.8rem;
+    color: var(--cor-titulo);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    max-width: 150px;
+}
+
+.habilidades__icone {
+    width: 50px;
+    height: 50px;
+}
+
+.habilidades__nome {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+/*------------------------------ Seção de Formação Acadêmica -----------------------*/
+.formacao {
+    padding: 2rem 1rem;
+    background-color: var(--cor-de-fundo);
+    text-align: center;
+}
+
+.formacao__titulo {
+    font-size: 1.8rem;
+    color: var(--cor-titulo);
+    margin-bottom: 1.5rem;
+}
+
+.formacao__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.formacao__elemento {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    max-width: 600px;
+    width: 100%; 
+}
+
+.formacao__icone {
+    width: 100px;
+    height: 50px;
+}
+
+.formacao__nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-titulo);
+}
+
+.formacao__detalhe {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+}
+
+.projetos {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.projetos__titulo {
+    font-size: 1.8rem;
+    color: var(--cor-titulo);
+    margin-bottom: 1.5rem;
+}
+
+.projetos__conteiner {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto; 
+    text-align: left; 
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    background-color: var(--cor-de-fundo);
+}
+
+.projetos__nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-titulo);
+    margin-bottom: 0.5rem;
+}
+
+.projetos__descricao {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
 
 
-/*------------------------------ Seção de Hobbies --------------------------------*/
 
-
-/*------------------------------ Seção de Projetos --------------------------------*/
-
-
-/*------------------------------ Seção de Contato ---------------------------------*/
-
-
-/* ------------------------------ Responsividade ---------------------------------------*/
-
-/* Tablets e telas maiores */
+/* ------------------------------ Responsividade ----------------------------------- */
 @media (min-width: 768px) {
-    .cabecalho {
+    .apresentacao {
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: left;
     }
 
-    .cabecalho__logo {
-        max-width: 100px;
-    }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
-    .navegacao__elemento a {
-        font-size: 1rem;
+    .sobre-mim__texto {
+        text-align: justify;
     }
 }
 
-/* Telas grandes */
 @media (min-width: 1024px) {
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
+    .habilidades__lista {
+        gap: 3rem;
     }
 
-    .navegacao__elemento a {
-        font-size: 1.1rem;
+    .formacao__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }
